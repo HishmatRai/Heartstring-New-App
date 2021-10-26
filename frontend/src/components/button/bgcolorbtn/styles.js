@@ -3,6 +3,7 @@ export default StyleSheet.create({
   _btn_main: {
     height:50,
     borderRadius:50,
+    alignSelf:"center"
   },
   button:{
     height:50,

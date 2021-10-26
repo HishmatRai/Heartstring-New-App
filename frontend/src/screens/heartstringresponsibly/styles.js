@@ -1,0 +1,111 @@
+import { StyleSheet } from "react-native";
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  _main: {
+    backgroundColor: "#000",
+    flex: 1,
+    paddingHorizontal: 20,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    paddingBottom:10
+  },
+  _heading: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 34,
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    marginTop: 10,
+  },
+  _sub_heading: {
+    color: "#EA00FE",
+    textAlign: "center",
+    fontSize: 34,
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    marginBottom: 10,
+    marginTop: -25,
+  },
+  _sub_headingios: {
+    color: "#EA00FE",
+    textAlign: "center",
+    fontSize: 34,
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    marginBottom: 10,
+  },
+  _logo: {
+    alignSelf: "center",
+    marginTop: 30,
+  },
+  card_main: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginHorizontal: 20,
+    marginTop: 30,
+  },
+  _Card_icon1: {
+    width: 60,
+    height: 60,
+    backgroundColor: "#09F9BF",
+    borderRadius: 60 / 2,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 20,
+  },
+  _Card_icon2: {
+    width: 60,
+    height: 60,
+    backgroundColor: "#FF1178",
+    borderRadius: 60 / 2,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 20,
+  },
+  _Card_icon3: {
+    width: 60,
+    height: 60,
+    backgroundColor: "#32CFFF",
+    borderRadius: 60 / 2,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 20,
+  },
+  _Card_title: {
+    color: "white",
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Light",
+    fontSize: 24,
+  },
+  _Card_heading: {
+    color: "#32CFFF",
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    fontSize: 24,
+    marginTop: -16,
+  },
+  _Card_headingios: {
+    color: "#32CFFF",
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    fontSize: 24,
+  },
+  _Card_headingios1: {
+    color: "#09F9BF",
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    fontSize: 24,
+  },
+  _Card_heading1: {
+    color: "#09F9BF",
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    fontSize: 24,
+    marginTop: -16,
+  },
+  _Card_headingios2: {
+    color: "#FF1178",
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    fontSize: 24,
+  },
+  _Card_heading2: {
+    color: "#FF1178",
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    fontSize: 24,
+    marginTop: -16,
+  },
+});

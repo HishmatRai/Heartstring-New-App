@@ -13,10 +13,9 @@ export default StyleSheet.create({
     textAlign: "center",
     fontSize: 34,
     fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
-    marginTop: 10,
   },
   _sub_heading: {
-    color: "#FF1178",
+    color: "#FFDC5D",
     textAlign: "center",
     fontSize: 34,
     fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
@@ -24,7 +23,7 @@ export default StyleSheet.create({
     marginTop: -25,
   },
   _sub_headingios: {
-    color: "#FF1178",
+    color: "#FFDC5D",
     textAlign: "center",
     fontSize: 34,
     fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
@@ -47,14 +46,6 @@ export default StyleSheet.create({
     fontFamily: "FontsFree-Net-SF-Pro-Rounded-Light",
     marginBottom: -10,
   },
-  _forgot_btn_text: {
-    textAlign: "center",
-    color: "#fff",
-    marginTop: 10,
-    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Light",
-    fontSize: 18,
-    opacity: 0.7,
-  },
   _back: {
     width: 30,
     height: 30,
@@ -62,20 +53,20 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  _message_des: {
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Light",
+    color: "#DFDFDF",
+    fontSize: 20,
+    textAlign: "center",
+    marginTop: 10,
+  },
   _logo: {
     alignSelf: "center",
     marginTop: 20,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    width:"100%",
-    marginBottom:30
-  },
-  _login_button_txt: {
-    color: "#fff",
-    fontSize: 20,
-    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
-    alignSelf: "center",
-    marginTop:10
+    width: "100%",
+    marginBottom: 30,
   },
 });

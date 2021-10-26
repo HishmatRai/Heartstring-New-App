@@ -38,6 +38,7 @@ export default function Select(props) {
         <View style={styles.logo}>
           <LogoIcon width={90} height={78} fill={"#000"} />
           <Heartstring width={260} height={41} fill={"#000"} />
+          <Text style={styles._tags_show}>Connect. Share. Chat. {"\n"}Stay anonymous.</Text>
         </View>
         <View>
           <BgColorButton
@@ -55,13 +56,14 @@ export default function Select(props) {
           <TouchableOpacity style={styles.login_button}>
             <Text style={styles._button_txt2}> log in </Text>
           </TouchableOpacity>
-          <Text style={styles._des}> If you continue you agree </Text>
           <View style={styles._des_main}>
-            <Text style={styles._des}> with our </Text>
+            <Text style={styles._des}>You agree with our </Text>
             <TouchableOpacity>
               <Text style={styles._terms_btn_text}>Terms & Privacy Policy</Text>
             </TouchableOpacity>
           </View>
+          <Text style={styles._des}>by signing up.</Text>
+          <View style={{marginBottom:15}}></View>
         </View>
       </View>
       <RBSheet
@@ -105,7 +107,7 @@ export default function Select(props) {
             </TouchableOpacity>
             <TouchableOpacity style={styles.apple_button}>
               <TryOut width={22} height={22} fill={"#000"} />
-              <Text style={styles.apple_button_txt}>Apple</Text>
+              <Text style={styles.apple_button_txt}>Try it out</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.close_button}
@@ -157,7 +159,7 @@ export default function Select(props) {
             </TouchableOpacity>
             <TouchableOpacity style={styles.apple_button}>
               <TryOut width={22} height={22} fill={"#000"} />
-              <Text style={styles.apple_button_txt}>Apple</Text>
+              <Text style={styles.apple_button_txt}>Try it out</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.close_button}

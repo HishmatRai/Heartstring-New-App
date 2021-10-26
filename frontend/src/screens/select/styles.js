@@ -35,7 +35,6 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignSelf: "center",
     marginTop: -10,
-    marginBottom: 20,
   },
   logo: {
     marginTop: 10,
@@ -119,4 +118,10 @@ export default StyleSheet.create({
     textAlign: "center",
     marginTop: 20,
   },
+  _tags_show:{
+    color: "#fff",
+    fontSize: 30,
+    fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+    textAlign: "center",
+  }
 });
