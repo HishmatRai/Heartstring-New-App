@@ -101,6 +101,7 @@ const Intro = (props) => {
         // showSkipButton={true}
         onSkip={onSkip}
         bottomButton
+        dotStyle={"white"}
       />
     </>
   );

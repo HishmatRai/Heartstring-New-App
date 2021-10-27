@@ -30,7 +30,7 @@ export default function Discover(props) {
           <Heartstring width={150} height={41} fill={"#000"} />
         </View>
         {dataShow ? (
-          <SwipeRowCard />
+          <SwipeRowCard path={props.navigation}/>
         ) : (
           <NodataMessage
             heading="it seems quiet now"

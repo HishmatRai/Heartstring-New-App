@@ -104,7 +104,7 @@ export default function SwipeRowCard(props) {
                 </View>
                 <TouchableOpacity
                   style={[styles._card_main, { backgroundColor: item.cardBg }]}
-                  onPress={() => props.navigation.navigate("SpaceCreated")}
+                  onPress={() => props.path.navigate("SpaceCreated")}
                 >
                   <View style={styles._card1}>
                     <View

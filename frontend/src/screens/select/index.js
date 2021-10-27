@@ -41,6 +41,7 @@ export default function Select(props) {
           <Text style={styles._tags_show}>Connect. Share. Chat. {"\n"}Stay anonymous.</Text>
         </View>
         <View>
+          <View style={{alignItems:"center",alignSelf:"center"}}>
           <BgColorButton
             buttonValue="sign up"
             path={() => this[RBSheet + 0].open()}
@@ -53,6 +54,7 @@ export default function Select(props) {
             buttonWidth={270}
             marginTop={20}
           />
+          </View>
           <TouchableOpacity style={styles.login_button}>
             <Text style={styles._button_txt2}> log in </Text>
           </TouchableOpacity>

@@ -6,45 +6,51 @@ export default StyleSheet.create({
   },
   _main: {
     backgroundColor: "#103EF9",
-    flex: 1,
+    // flex: 1,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    height:300,
   },
   _main2: {
     backgroundColor: "#FEAD05",
-    flex: 1,
+    // flex: 1,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    height:300
   },
   _main3: {
     backgroundColor: "#05C4DE",
-    flex: 1,
+    // flex: 1,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    height:300
   },
   _main4: {
     backgroundColor: "#FF1178",
-    flex: 1,
+    // flex: 1,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    height:300
   },
   _main5: {
     backgroundColor: "#8D13FF",
-    flex: 1,
+    // flex: 1,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    height:300
   },
   _main6: {
     backgroundColor: "#103EF9",
-    flex: 1,
+    // flex: 1,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    height:300
   },
   button: {
     alignSelf: "center",
@@ -131,7 +137,6 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     alignSelf: "center",
-    marginBottom:"20%"
   },
   _leave_comment_btn_main: {
     backgroundColor: "#1C1C1E",
@@ -155,10 +160,9 @@ export default StyleSheet.create({
     fontSize: 20,
   },
   card_maiin: {
-    flex:1,
     width: "100%",
     justifyContent: "center",
-    // height:350,
+    height:300
   
   },
   imageStyle: {

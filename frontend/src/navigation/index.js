@@ -24,11 +24,11 @@ function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Intro"
           component={Intro}
           options={{ headerShown: false }}
-        />
+        /> */}
         <Stack.Screen
           name="StartSpace"
           component={StartSpace}

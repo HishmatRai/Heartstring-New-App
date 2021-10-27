@@ -156,6 +156,7 @@ export default function StartSpace(props) {
     const { currentPage } = sliderState;
     const { y } = event.nativeEvent.contentOffset;
     const indexOfNextScreen = Math.floor(y / width);
+    console.log("===========>>>>>",indexOfNextScreen)
     if (indexOfNextScreen !== currentPage) {
       setSliderState({
         ...sliderState,
@@ -184,17 +185,19 @@ export default function StartSpace(props) {
         ]}
       >
         <ScrollView
-          style={{ flex: 1 }}
           scrollEventThrottle={16}
           pagingEnabled={true}
           showsVerticalScrollIndicator={false}
           onScroll={(event) => {
             setSliderPage(event);
           }}
+          style={{
+            height:screen.height,
+          }}
         >
           {CardData.map((v, i) => {
             return (
-              <View key={i} style={styles.card_maiin}>
+              <View key={i} style={[styles.card_maiin]}>
                 <Image
                   source={require("./../../../assets/images/UserProfile.jpg")}
                   style={styles.slider_profile}
