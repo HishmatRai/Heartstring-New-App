@@ -13,7 +13,7 @@ export default function BottomTab(props) {
     },
     {
       icon: props.tab3,
-      path: () => props.path.navigate("SpaceCreated"),
+      path: () => props.path.navigate("InviteFriends"),
     },
     {
       icon: props.tab4,

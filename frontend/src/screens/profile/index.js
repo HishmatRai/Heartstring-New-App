@@ -3,16 +3,16 @@ import {
   Text,
   View,
   StatusBar,
-  TouchableOpacity,
   Image,
   Platform,
 } from "react-native";
 import BottomTab from "../../components/bottomtab";
+import BgColorButton from "./../../components/button/bgcolorbtn";
 import DiscoverIcon from "./../../../assets/images/DiscoverIcon.svg";
-import MessageActiveIcon from "./../../../assets/images/MessageActiveIcon.svg";
+import MessageIcon from "./../../../assets/images/MessageIcon.svg";
 import TabsAppICon from "./../../../assets/images/TabsAppICon.svg";
 import StarIcon from "./../../../assets/images/StarIcon.svg";
-import UserIcon from "./../../../assets/images/UserIcon.svg";
+import UserActiveIcon from "./../../../assets/images/UserActiveIcon.svg";
 import styles from "./styles";
 export default function Profile(props) {
   return (
@@ -23,7 +23,6 @@ export default function Profile(props) {
         backgroundColor="#233BED"
         translucent={false}
       />
-      <View style={styles._header_bg}></View>
       <View style={styles._data_main}>
         <Image
           source={require("./../../../assets/images/UserProfile.jpg")}
@@ -50,21 +49,23 @@ export default function Profile(props) {
             <Text style={styles._counter_heading}>spaces</Text>
           </View>
         </View>
-        <TouchableOpacity
-          style={styles._setting_btn}
-          onPress={() => props.navigation.navigate("Settings")}
-        >
-          <Text style={styles._button_txt}>settings</Text>
-        </TouchableOpacity>
+        <BgColorButton
+          buttonValue="settings"
+          path={() => props.navigation.navigate("Settings")}
+          buttonWidth={200}
+          marginTop={50}
+        />
       </View>
-      <BottomTab
-        path={props.navigation}
-        tab1={<UserIcon width={48} height={48} fill={"#000"} />}
-        tab2={<StarIcon width={48} height={48} fill={"#000"} />}
-        tab3={<TabsAppICon width={48} height={48} fill={"#000"} />}
-        tab4={<MessageActiveIcon width={48} height={48} fill={"#000"} />}
-        tab5={<DiscoverIcon width={48} height={48} fill={"#000"} />}
-      />
+      <View style={{ backgroundColor: "#000" }}>
+        <BottomTab
+          path={props.navigation}
+          tab1={<UserActiveIcon width={48} height={48} fill={"#000"} />}
+          tab2={<StarIcon width={48} height={48} fill={"#000"} />}
+          tab3={<TabsAppICon width={48} height={48} fill={"#000"} />}
+          tab4={<MessageIcon width={48} height={48} fill={"#000"} />}
+          tab5={<DiscoverIcon width={48} height={48} fill={"#000"} />}
+        />
+      </View>
     </View>
   );
 }

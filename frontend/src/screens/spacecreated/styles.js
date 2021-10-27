@@ -1,0 +1,93 @@
+import { StyleSheet } from "react-native";
+export default StyleSheet.create({
+    container: {
+        flex: 1,
+      },
+      _main: {
+        backgroundColor: "#9044EA",
+        paddingTop: 30,
+        flex: 1,
+      },
+      button: {
+        width: 100,
+        alignSelf: "center",
+        height: 29,
+        marginBottom: 10,
+        marginTop: 5,
+        borderRadius: 20,
+        alignItems: "center",
+        justifyContent: "center",
+      },
+      _button_txt: {
+        color: "#000",
+        fontSize: 16,
+        fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+      },
+      _welcome: {
+        color: "#000",
+        fontSize: 24,
+        fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+        marginHorizontal: 30,
+        textAlign: "center",
+        marginTop: -20,
+      },
+      _welcomeios: {
+        color: "#000",
+        fontSize: 24,
+        fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+        marginHorizontal: 30,
+        textAlign: "center",
+      },
+      _header_main2: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-around",
+        backgroundColor: "#000",
+        height: 110,
+        position: "absolute",
+        bottom: 0,
+        width: "100%",
+      },
+      _emoji_main: {
+        backgroundColor: "#AB51FF",
+        width: 100,
+        height: 100,
+        borderRadius: 15,
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 80,
+      },
+      _tags: {
+        color: "#000",
+        textAlign: "center",
+        fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+        fontSize: 34,
+      },
+      _Des: {
+        color: "#000",
+        textAlign: "center",
+        fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+        fontSize: 24,
+      },
+      _slider_main: {
+        width: "80%",
+        alignSelf: "center",
+        marginTop: 20,
+      },
+      _slider: {
+        alignItems: "center",
+        marginRight: 13,
+      },
+      _cancel_button_txt: {
+        color: "#000",
+        fontSize: 20,
+        fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
+        textAlign: "center",
+      },
+      _profile: {
+        width: 44,
+        height: 44,
+        borderRadius: 44 / 2,
+      },
+})

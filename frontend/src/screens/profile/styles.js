@@ -25,17 +25,6 @@ export default StyleSheet.create({
         paddingHorizontal: 20,
         fontFamily: "FontsFree-Net-SF-Pro-Rounded-Light",
       },
-      _setting_btn: {
-        width: "50%",
-        alignSelf: "center",
-        height: 50,
-        marginTop: 20,
-        marginBottom: 20,
-        alignItems: "center",
-        borderRadius: 50,
-        justifyContent: "center",
-        backgroundColor: "white",
-      },
       _counter_show_main: {
         width: "50%",
         alignSelf: "center",
@@ -59,8 +48,8 @@ export default StyleSheet.create({
       },
       _data_main: {
         flex: 1,
-        backgroundColor: "#0D0D0D",
-        marginTop: "50%",
+        backgroundColor: "#000",
+        marginTop: "35%",
       },
       _profile: {
         alignSelf: "center",
@@ -68,10 +57,5 @@ export default StyleSheet.create({
         width: 142,
         height: 142,
         borderRadius: 142 / 2,
-      },
-      _button_txt: {
-        color: "#000",
-        fontSize: 20,
-        fontFamily: "FontsFree-Net-SF-Pro-Rounded-Black",
       },
 })

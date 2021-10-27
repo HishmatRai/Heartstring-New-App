@@ -11,28 +11,70 @@ import Splash from "./../screens/splash";
 import Discover from "./../screens/discover";
 import Spaces from "./../screens/spaces";
 import SavedSpaces from "./../screens/savedspaces";
-import Profile from './../screens/profile'
+import Profile from './../screens/profile';
+import Settings from './../screens/settings';
+import ProfileOverview from './../screens/profileoverview';
+import SettingsOverview from './../screens/settingsoverview';
+import Feedback from './../screens/feedback';
+import InviteFriends from './../screens/invitefriends';
+import SpaceCreated from './../screens/spacecreated';
+import StartSpace from './../screens/startspace'
 const Stack = createNativeStackNavigator();
 function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
+      <Stack.Screen
+          name="StartSpace"
+          component={StartSpace}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="SpaceCreated"
+          component={SpaceCreated}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="InviteFriends"
+          component={InviteFriends}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="Feedback"
+          component={Feedback}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SettingsOverview"
+          component={SettingsOverview}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="Intro"
           component={Intro}
           options={{ headerShown: false }}
-        /> */}
-        {/* <Stack.Screen
+        />
+        <Stack.Screen
           name="Select"
           component={Select}
           options={{ headerShown: false }}
-        /> */}
-        {/* <Stack.Screen
+        />
+        <Stack.Screen
           name="Login"
           component={Login}
           options={{ headerShown: false }}
-        /> */}
+        />
+           <Stack.Screen
+          name="ProfileOverview"
+          component={ProfileOverview}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
+          name="Settings"
+          component={Settings}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
           name="Profile"
           component={Profile}
           options={{ headerShown: false }}
