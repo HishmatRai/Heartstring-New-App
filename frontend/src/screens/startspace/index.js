@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import {
-  StyleSheet,
   View,
   Text,
   StatusBar,
@@ -15,20 +14,18 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-// import {
-//   StartSpaceBackIcon,
-//   StartSpaceMessageIcon,
-//   StartSpaceSaveIcon,
-//   StartSpaceShareIcon,
-//   SendCommentIcon,
-// } from "../../Components/Svg/Svg";
 import styles from "./styles";
+import BgColorButton from "./../../components/button/bgcolorbtn";
+import LocationIcon from "./../../../assets/images/LocationIcon.svg";
 import DiscoverActive from "./../../../assets/images/DiscoverActive.svg";
 import MessageIcon from "./../../../assets/images/MessageIcon.svg";
 import TabsAppICon from "./../../../assets/images/TabsAppICon.svg";
 import StarIcon from "./../../../assets/images/StarIcon.svg";
 import UserIcon from "./../../../assets/images/UserIcon.svg";
-import Heartstring from "./../../../assets/images/Heartstring.svg";
+import MessageCounterIcon from "./../../../assets/images/MessageCounterIcon.svg";
+import SaveCounterIcon from "./../../../assets/images/SaveCounterIcon.svg";
+import ShareCounterIcon from "./../../../assets/images/ShareCounterIcon.svg";
+import CommentSendIcon from "./../../../assets/images/CommentSendIcon.svg";
 import BottomTab from "../../components/bottomtab";
 import { AntDesign, Ionicons, Foundation } from "@expo/vector-icons";
 import RBSheet from "react-native-raw-bottom-sheet";
@@ -44,7 +41,7 @@ export default function StartSpace(props) {
       emoji: "💎",
       tag: "#crypotalks",
       data: `What do you think of ETH ${"\n"}right now? Should I buy ${"\n"}some or wait?`,
-      buttonBg: "#4167FF",
+      buttonBg: "#000",
       btn1Text: "tech",
       btn2Text: "seoul",
     },
@@ -53,7 +50,7 @@ export default function StartSpace(props) {
       emoji: "😀",
       tag: "#meetupAMS",
       data: `What do you think of ETH ${"\n"}right now? Should I buy ${"\n"}some or wait?`,
-      buttonBg: "#FFBB35",
+      buttonBg: "#000",
       btn1Text: "social",
       btn2Text: "amsterdam",
     },
@@ -62,7 +59,7 @@ export default function StartSpace(props) {
       emoji: "😷",
       tag: "#COVID19",
       data: `What do you think of ETH ${"\n"}right now? Should I buy ${"\n"}some or wait?`,
-      buttonBg: "#45DFDD",
+      buttonBg: "#000",
       btn1Text: "society",
       btn2Text: "barcelona",
     },
@@ -71,7 +68,7 @@ export default function StartSpace(props) {
       emoji: "💌",
       tag: "#datingstuff",
       data: `What do you think of ETH ${"\n"}right now? Should I buy ${"\n"}some or wait?`,
-      buttonBg: "#FF4D4D",
+      buttonBg: "#000",
       btn1Text: "relationships",
       btn2Text: "austin",
     },
@@ -80,7 +77,7 @@ export default function StartSpace(props) {
       emoji: "🖖🏽",
       tag: "#justvibing",
       data: `What do you think of ETH ${"\n"}right now? Should I buy ${"\n"}some or wait?`,
-      buttonBg: "#AB51FF",
+      buttonBg: "#000",
       btn1Text: "random",
       btn2Text: "new york",
     },
@@ -186,18 +183,64 @@ export default function StartSpace(props) {
           pageIndex === 5 ? styles._main6 : null,
         ]}
       >
+        <ScrollView
+          style={{ flex: 1 }}
+          scrollEventThrottle={16}
+          pagingEnabled={true}
+          showsVerticalScrollIndicator={false}
+          onScroll={(event) => {
+            setSliderPage(event);
+          }}
+        >
+          {CardData.map((v, i) => {
+            return (
+              <View key={i} style={styles.card_maiin}>
+                <Image
+                  source={require("./../../../assets/images/UserProfile.jpg")}
+                  style={styles.slider_profile}
+                />
+                <Text style={styles.user_name}>SuperFly31</Text>
+                <Text style={styles._address}>Barcelona, Spain</Text>
+                <Text style={styles._tags}>{v.tag}</Text>
+                {Platform.OS === "ios" ? (
+                  <View>
+                    <Text style={styles._welcomeios}>Trading crypto.</Text>
+                  </View>
+                ) : (
+                  <View>
+                    <Text style={styles._welcome}>Trading crypto.</Text>
+                  </View>
+                )}
+
+                <View style={styles._btn_main}>
+                  <TouchableOpacity
+                    style={[styles.button, { backgroundColor: v.buttonBg }]}
+                  >
+                    <Text style={[styles._button_txt, { color: v.emojiBg }]}>
+                      {v.btn1Text}
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={[styles.button]}>
+                    <Text style={styles._button_txt}>
+                      <LocationIcon width={9} height={15} fill={"#000"} />{" "}
+                      {v.btn2Text}
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            );
+          })}
+        </ScrollView>
+      </View>
+
+      <View style={styles._data_counter_main}>
+        <View style={styles._data_counter_rouder}></View>
         <View style={styles._header_main}>
-          <View style={styles._header_icons_main}>
-            <TouchableOpacity onPress={() => props.navigation.goBack()}>
-              {/* <StartSpaceBackIcon /> */}
-            </TouchableOpacity>
-            <Text style={styles._header_text}></Text>
-          </View>
           <View style={styles._header_icons_main}>
             <TouchableOpacity
               onPress={() => props.navigation.navigate("LeaveComment")}
             >
-              {/* <StartSpaceMessageIcon /> */}
+              <MessageCounterIcon width={48} height={48} fill={"#000"} />
             </TouchableOpacity>
             <Text style={styles._header_text}>
               {pageIndex === 0 ? "90" : null}
@@ -209,9 +252,7 @@ export default function StartSpace(props) {
             </Text>
           </View>
           <View>
-            <TouchableOpacity>
-              {/* <StartSpaceSaveIcon /> */}
-            </TouchableOpacity>
+            <SaveCounterIcon width={48} height={48} fill={"#000"} />
             <Text style={styles._header_text}>
               {pageIndex === 0 ? "200" : null}
               {pageIndex === 1 ? "180" : null}
@@ -223,7 +264,7 @@ export default function StartSpace(props) {
           </View>
           <View>
             <TouchableOpacity onPress={onShare}>
-              {/* <StartSpaceShareIcon /> */}
+              <ShareCounterIcon width={48} height={48} fill={"#000"} />
             </TouchableOpacity>
             <Text style={styles._header_text}>
               {pageIndex === 0 ? "400" : null}
@@ -235,119 +276,25 @@ export default function StartSpace(props) {
             </Text>
           </View>
         </View>
-
-        <ScrollView
-          style={{ flex: 1 }}
-          // horizontal={true}
-          scrollEventThrottle={16}
-          pagingEnabled={true}
-          // showsHorizontalScrollIndicator={false}
-          showsVerticalScrollIndicator={false}
-          onScroll={(event) => {
-            setSliderPage(event);
-          }}
-        >
-          {CardData.map((v, i) => {
-            return (
-              <View
-                key={i}
-                style={[styles.card_maiin, { height: screen.height - 320 }]}
-              >
-                <View
-                  style={[styles._emoji_main, { backgroundColor: v.emojiBg }]}
-                >
-                  <Text style={styles._emoji}>{v.emoji}</Text>
-                </View>
-                <Text style={styles._tags}>{v.tag}</Text>
-                {Platform.OS === "ios" ? (
-                  <View>
-                    <Text style={styles._welcomeios}>Trading crypto.</Text>
-                    <Text style={styles._Desios}>{v.data}</Text>
-                  </View>
-                ) : (
-                  <View>
-                    <Text style={styles._welcome}>Trading crypto.</Text>
-                    <Text style={styles._Des}>{v.data}</Text>
-                  </View>
-                )}
-
-                <View style={styles._btn_main}>
-                  <TouchableOpacity
-                    style={[styles.button, { backgroundColor: v.buttonBg }]}
-                  >
-                    <Text style={styles._button_txt}>{v.btn1Text}</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={[styles.button, { backgroundColor: v.buttonBg }]}
-                  >
-                    <Text style={styles._button_txt}>{v.btn2Text}</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            );
-          })}
-        </ScrollView>
-        {/* <View style={styles.paginationWrapper}>
-          {CardData.map((key, index) => (
-            <View style={[styles.paginationDots, { opacity: pageIndex === index ? 1 : 0.2 }]} key={index} />
-          ))}
-        </View> */}
-        {/* <ScrollView
-          style={[styles.scrollview, { width: screen.height }]}
-          pagingEnabled={true}
-          onScroll={(event)=>console.log("================>>>>",event)}
-        >
-          {CardData.map((v, i) => {
-            return (
-              <View
-                key={i}
-                style={[styles.card_maiin, { height: screen.height - 265 }]}
-              >
-                <View
-                  style={[styles._emoji_main, { backgroundColor: v.emojiBg }]}
-                >
-                  <Text style={styles._emoji}>{v.emoji}</Text>
-                </View>
-                <Text style={styles._tags}>{v.tag}</Text>
-                <Text style={styles._welcome}>Trading crypto.</Text>
-                <Text style={styles._Des}>{v.data}</Text>
-                <View style={styles._btn_main}>
-                  <TouchableOpacity
-                    style={[styles.button, { backgroundColor: v.buttonBg }]}
-                  >
-                    <Text style={styles._button_txt}>{v.btn1Text}</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={[styles.button, { backgroundColor: v.buttonBg }]}
-                  >
-                    <Text style={styles._button_txt}>{v.btn2Text}</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            );
-          })}
-        </ScrollView> */}
-        <TouchableOpacity
-          style={styles._leave_comment_btn_main}
-          // onPress={() => props.navigation.navigate("LeaveComment")}
-          onPress={() => refRBSheet.current.open()}
-        >
-          <Image
-            source={require("./../../../assets/images/UserProfile.jpg")}
-            style={styles._profile}
-          />
-          <Text style={styles._input}>Leave a comment...</Text>
-          {/* <SendCommentIcon /> */}
-        </TouchableOpacity>
+        <Text style={styles._after_counter_messsage}>
+          What do you think of {"\n"}ETH right now? Should I {"\n"}buy some or
+          wait?
+        </Text>
+        <BgColorButton
+          buttonValue="comment"
+          path={() => refRBSheet.current.open()}
+          buttonWidth={200}
+          marginTop={20}
+        />
+        <BottomTab
+          path={props.navigation}
+          tab1={<UserIcon width={48} height={48} fill={"#000"} />}
+          tab2={<StarIcon width={48} height={48} fill={"#000"} />}
+          tab3={<TabsAppICon width={48} height={48} fill={"#000"} />}
+          tab4={<MessageIcon width={48} height={48} fill={"#000"} />}
+          tab5={<DiscoverActive width={48} height={48} fill={"#000"} />}
+        />
       </View>
-      <BottomTab
-        path={props.navigation}
-        tab1={<UserIcon width={48} height={48} fill={"#000"} />}
-        tab2={<StarIcon width={48} height={48} fill={"#000"} />}
-        tab3={<TabsAppICon width={48} height={48} fill={"#000"} />}
-        tab4={<MessageIcon width={48} height={48} fill={"#000"} />}
-        tab5={<DiscoverActive width={48} height={48} fill={"#000"} />}
-      />
       <RBSheet
         ref={refRBSheet}
         closeOnDragDown={true}
@@ -465,10 +412,6 @@ export default function StartSpace(props) {
             >
               <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={styles._leave_comment_btn_main}>
-                  <Image
-                    source={require("./../../../assets/images/UserProfile.jpg")}
-                    style={styles._profile}
-                  />
                   {Platform.OS === "ios" ? (
                     <TextInput
                       placeholder="Leave a comment..."
@@ -491,7 +434,7 @@ export default function StartSpace(props) {
                     />
                   )}
                   <TouchableOpacity>
-                    {/* <SendCommentIcon /> */}
+                    <CommentSendIcon width={46} height={46} fill={"#000"} />
                   </TouchableOpacity>
                 </View>
               </TouchableWithoutFeedback>

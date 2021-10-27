@@ -58,7 +58,13 @@ const Intro = (props) => {
           <Heartstring width={260} height={41} fill={"#000"} />
         </View>
         {Platform.OS === "ios" ? (
-          <View style={{ alignSelf: "center", justifyContent: "center" }}>
+          <View
+            style={{
+              alignSelf: "center",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Text style={styles.introTitleStyleios}>{item.title}</Text>
             <Text
               style={[styles.introTextStyleios, { color: item.titleColor }]}
@@ -68,7 +74,13 @@ const Intro = (props) => {
             {item.svgImageiOSPath}
           </View>
         ) : (
-          <View style={{ alignSelf: "center", justifyContent: "center" }}>
+          <View
+            style={{
+              alignSelf: "center",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Text style={styles.introTitleStyle}>{item.title}</Text>
             <Text style={[styles.introTextStyle, { color: item.titleColor }]}>
               {item.text}
